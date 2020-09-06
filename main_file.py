@@ -17,7 +17,7 @@ f = open("password.txt",'r')
 password = f.readline()
 
 #password setup
-x=getpass.getpass("Enter Your Password : ")
+x = getpass.getpass("Enter Your Password : ")
 if x==password:
 	print(colored("LogIn Successfull !","red"))
 	print()
@@ -157,10 +157,10 @@ Enter 21 : to exit
 			sys("google-chrome {}".format(website))
 			print()
 		elif choice == 20:
-			sender_email = "hemantgangwar9@gmail.com"
-			rec_email = "hemantgangwar543@gmail.com"
-			password = input(str("Enter your password :"))
-			message = "This email was sent using python."
+			sender_email = input(str("Enter your email :"))
+			rec_email = input(str("Enter receiver_email :"))
+			message = input("Enter your message : ")
+			password = getpass.getpass("Enter Your Password : ")
 			server = smtplib.SMTP('smtp.gmail.com',587)
 			server.ehlo()
 			server.starttls()
